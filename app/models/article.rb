@@ -16,6 +16,7 @@ class Article < ActiveRecord::Base
 		#agent.get(self.link) # This fetches the page given as parameter
    		#self.title = agent.page.title # This will return the title of the page
   		self.title = obj[0].title
-  		self.summary= obj[0].description
+  		self.summary = obj[0].description
+  		self.author = obj[0].author_name
   	end
 end
