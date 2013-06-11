@@ -38,4 +38,3 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 gem 'embedly'
-gem 'mechanize'
