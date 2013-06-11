@@ -8,7 +8,7 @@ def create
   end
 
   def destroy
-  	@issue = Issue.find(params[issue_id])
+  	@issue = Issue.find(params[:issue_id])
   	@article = @issue.articles.find(params[:id])
   	@article.destroy
   	redirect_to issue_path(@issue)
