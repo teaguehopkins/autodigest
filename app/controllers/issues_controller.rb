@@ -1,4 +1,6 @@
 class IssuesController < ApplicationController
+http_basic_authenticate_with :name => "cth", :password => "teague", :except => [:index, :show]
+
   # GET /issues
   # GET /issues.json
   def index

@@ -1,0 +1,15 @@
+  <p>
+    <b>Link:</b>
+    <%= article.link %>
+  </p>
+ 
+  <p>
+    <b>Summary:</b>
+    <%= article.summary %>
+  </p>
+
+  <p>
+  <%= link_to 'Destroy Article', [article.issue, article],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+  </p>
