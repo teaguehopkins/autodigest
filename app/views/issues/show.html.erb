@@ -15,6 +15,33 @@
   <%= @issue.content %>
 </p>
 
+<h2>Articles</h2>
+<% @issue.articles.each do |article| %>
+  <p>
+    <b>Link:</b>
+    <%= article.link %>
+  </p>
+ 
+  <p>
+    <b>Summary:</b>
+    <%= article.summary %>
+  </p>
+<% end %>
+
+<h2>Add an article to this issue:</h2>
+<%= form_for([@issue, @issue.articles.build]) do |f| %>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_area :summary %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_issue_path(@issue) %> |
 <%= link_to 'Back', issues_path %>

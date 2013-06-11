@@ -1,7 +1,8 @@
 Autodigest::Application.routes.draw do
-  resources :issues
-
-
+  resources :issues do
+    resources :articles
+  end
+  
   get "home/index"
 
   # The priority is based upon order of creation:
