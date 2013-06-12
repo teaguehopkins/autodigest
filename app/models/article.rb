@@ -15,9 +15,17 @@ class Article < ActiveRecord::Base
       else
         self.link = @url
       end
-      self.title = obj[0].title
-  		self.summary = obj[0].description
-  		self.author = obj[0].author_name
-      self.thumbnail_url = obj[0].thumbnail_url
-  	end
+      if self.title==nil
+        self.title = obj[0].title
+      end
+      if self.summary==nil
+  		  self.summary = obj[0].description
+      end
+  		if self.author==nil
+        self.author = obj[0].author_name
+      end
+      if self.thumbnail_url==nil
+        self.thumbnail_url = obj[0].thumbnail_url
+      end  	
+    end
 end
