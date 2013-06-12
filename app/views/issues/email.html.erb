@@ -1,18 +1,14 @@
 Email View
 <p>
-  <b>Name:</b>
-  <%= @issue.name %>
+  <h1><%= @issue.title %></h1>
 </p>
 
 <p>
-  <b>Title:</b>
-  <%= @issue.title %>
-</p>
-
-<p>
-  <b>Content:</b>
   <%= @issue.content %>
 </p>
+-<%= @issue.name %>
+
+
 
 <h2>Articles</h2>
-<%= render @issue.articles %>
+<%= render :partial => "/articles/email", :collection => @issue.articles, :as => :article %>

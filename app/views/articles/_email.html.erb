@@ -1,0 +1,15 @@
+  <p>
+  <h3><a href=<%= article.link %>><%= article.title %></a></h3>
+  <em><%=
+  if article.author!=nil
+    then "By"
+  else
+    ""
+    end
+    %> 
+    <%= article.author %></em>
+  </p>
+  <p>
+    <%= article.summary %>
+  </p>
+  ---
