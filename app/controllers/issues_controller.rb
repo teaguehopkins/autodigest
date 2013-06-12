@@ -82,4 +82,14 @@ http_basic_authenticate_with :name => "cth", :password => "teague", :except => [
       format.json { head :no_content }
     end
   end
+
+#Email specific view /issues/1/email
+  def email
+    @issue = Issue.find(params[:id])
+
+    respond_to do |format|
+      format.html # email.html.erb
+      format.json { render json: @issue }
+    end
+  end
 end

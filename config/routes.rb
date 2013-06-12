@@ -2,7 +2,9 @@ Autodigest::Application.routes.draw do
   resources :issues do
     resources :articles
   end
-  
+
+match "issues/:id/email" => "issues#email"
+
   get "home/index"
 
   # The priority is based upon order of creation:
