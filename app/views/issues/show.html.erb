@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
+<script>
+window.onload=toBottom;
 
+function toBottom()
+{
+window.scrollTo(0, document.body.scrollHeight);
+}
+</script>
 <p>
   <b>Name:</b>
   <%= @issue.name %>
