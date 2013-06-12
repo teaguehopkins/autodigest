@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130611181318) do
+ActiveRecord::Schema.define(:version => 20130612171426) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20130611181318) do
     t.string   "link"
     t.text     "summary"
     t.integer  "issue_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "thumbnail_url"
   end
 
   add_index "articles", ["issue_id"], :name => "index_articles_on_issue_id"

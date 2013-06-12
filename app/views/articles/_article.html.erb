@@ -19,7 +19,14 @@
   </p>
 
   <p>
+    <b>Thumbnail:</b>
+    <%= article.thumbnail_url %>
+  </p>
+
+  <p>
   <%= link_to 'Destroy Article', [article.issue, article],
                :confirm => 'Are you sure?',
                :method => :delete %>
   </p>
+
+  <hr>

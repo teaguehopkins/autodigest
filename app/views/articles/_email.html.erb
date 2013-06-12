@@ -1,15 +1,17 @@
+  <% if article.thumbnail_url %>
+     <table><tr><td>
+  <% end %>
   <p>
   <h3><a href=<%= article.link %>><%= article.title %></a></h3>
-  <em><%=
-  if article.author!=nil
-    then "By"
-  else
-    ""
-    end
-    %> 
-    <%= article.author %></em>
+  <% if article.author %> 
+      <em>By
+      <%= article.author %></em>
+    <% end %> 
   </p>
   <p>
     <%= article.summary %>
   </p>
+   <% if article.thumbnail_url %>
+    </td><td><img src=<%= article.thumbnail_url %> height="100px" width="100px"></td></tr></table>
+  <% end %>
  <hr>
