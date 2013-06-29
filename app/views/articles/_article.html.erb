@@ -23,6 +23,12 @@
     <%= article.thumbnail_url %>
   </p>
 
+<p>
+  <% if article.thumbnail_url %>
+    <img src=<%= article.thumbnail_url %> height="100px" width="100px">
+      <% end %>
+</p>
+
   <p>
   <%= link_to 'Destroy Article', [article.issue, article],
                :confirm => 'Are you sure?',
