@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-http_basic_authenticate_with :name => "cth", :password => "teague" #, :only => :destroy
+http_basic_authenticate_with :name => "admin", :password => "password" #, :only => :destroy
 
   def create
     @issue = Issue.find(params[:issue_id])
