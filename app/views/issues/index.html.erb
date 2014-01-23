@@ -1,23 +1,22 @@
 <h1>Listing issues</h1>
-
-<table>
+<table style="border:1px solid black; border-collapse:collapse;">
   <tr>
-    <th>Name</th>
     <th>Title</th>
     <th>Content</th>
+    <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @issues.each do |issue| %>
-  <tr>
-    <td><%= issue.name %></td>
-    <td><%= issue.title %></td>
-    <td><%= issue.content %></td>
-    <td><%= link_to 'Show', issue %></td>
-    <td><%= link_to 'Edit', edit_issue_path(issue) %></td>
-    <td><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  <tr>  
+    <td style="border:1px solid black;"><%= issue.title %></td>
+    <td style="border:1px solid black;"><%= issue.content %></td>
+    <td style="border:1px solid black;"><%= issue.name %></td>
+    <td style="border:1px solid black;"><%= link_to 'Show', issue %></td>
+    <td style="border:1px solid black;"><%= link_to 'Edit', edit_issue_path(issue) %></td>
+    <td style="border:1px solid black;"><%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
