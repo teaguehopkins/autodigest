@@ -1,0 +1,28 @@
+<%= form_for([@issue, @article]) do |f| %>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link, :value => @article.link%>
+  </div>
+    <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title,:value => @article.title %>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author, :value => @article.author %>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_area :summary, :value => @article.summary%>
+  </div>
+    </div>
+    <div class="field">
+    <%= f.label :thumbnail_url %><br />
+    <%= f.text_field :thumbnail_url, :value => @article.thumbnail_url%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
